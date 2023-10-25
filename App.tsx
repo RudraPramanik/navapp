@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './src/Home';
 import Details from './src/Details';
-type RootStackParamList = {
+export type RootStackParamList = {
   Home: undefined;
   Details: { productId: string };
 };
@@ -24,7 +24,7 @@ export default function App(): JSX.Element {
         <stack.Screen
           name="Details"
           component={Details}
-          options={{ title: 'trending' }}
+          options={{ title: 'Details' }}
         />
       </stack.Navigator>
     </NavigationContainer>
